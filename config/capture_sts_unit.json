@@ -1,0 +1,86 @@
+{
+  "geometry": {
+    "file": "/u/dramirez/cbm/cbmroot_geometry/macro/sts/fair/sts_v26a.geo.root",
+    "node": "Unit04L_10"
+  },
+  "layout": {
+    "matrix": [
+      "1111333",
+      "1111333",
+      "2222333",
+      "2222333"
+    ],
+    "aliases": {
+      "perspective": "3",
+      "orthographic_zox": "1",
+      "orthographic_xoy": "2"
+    }
+  },
+  "cameras": {
+    "3": {
+      "title": "Perspective",
+      "direction": [1, 0, 0.85],
+      "up": [0, 1, 0],
+      "zoom": 1.0,
+      "perspective": true
+    },
+    "1": {
+      "title": "Orthographic ZOX",
+      "direction": [0, 1, 0],
+      "up": [0, 0, 1],
+      "zoom": 1.0,
+      "perspective": false,
+      "grid_axes": ["X", "Z"]
+    },
+    "2": {
+      "title": "Orthographic XOY",
+      "direction": [0, 0, 1],
+      "up": [0, 1, 0],
+      "zoom": 0.5,
+      "perspective": false,
+      "grid_axes": ["X", "Y"]
+    }
+  },
+  "dimensions": {
+    "3": [
+      {
+        "name": "Sensor Gap/Overlap",
+        "axis": "Y",
+        "side": "top",
+        "offset_px": 50,
+        "from": {
+          "shape": "Sensor01Shp",
+          "instance": "topmost",
+          "point": "min_y"
+        },
+        "to": {
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "max_y"
+        }
+      }
+    ]    
+  },
+  "render": {
+    "width": 1600,
+    "height": 1200,
+    "dpi": [600, 600],
+    "output": "data/output/capture_sts_unit.png",
+    "dimension_style": {
+      "font_size": 18,
+      "color_rgb": [165, 45, 40],
+      "line_width": 2,
+      "default_offset_px": 48,
+      "extension_dash_px": [3, 5],
+      "extension_width": 2,
+      "extension_overhang_px": 12,
+      "arrow_length_px": 9,
+      "arrow_half_width_px": 5
+    },
+    "typography": {
+      "tick_label_font_size": 20,
+      "pad_title_font_size": 26,
+      "axis_title_font_size": 16
+    }
+  }
+}

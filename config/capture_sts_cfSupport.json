@@ -1,0 +1,192 @@
+{
+
+  "geometry": {
+    "file": "/u/dramirez/cbm/CBMROOT_250323/src/geometry/sts/sts_v26a.geo.root",
+    "node": "Unit00R_1/Ladder_LadderType09_101/LadderType09_cfSupport_0",
+    "exclude_shapes": ["base_segments_bbox"]
+  },
+  "layout": {
+    "matrix": [
+      "11144",
+      "22244",
+      "33355"
+    ],
+    "aliases": {
+      "perspective": "1",
+      "orthographic_zoy": "2",
+      "orthographic_zox": "3",
+      "orthographic_xoy": "4"
+    }
+  },
+  "cameras": {
+    "1": {
+      "title": "Perspective",
+      "direction": [1, -1, 0.85],
+      "up": [0, 1, 0],
+      "zoom": 1.0,
+      "perspective": true
+    },
+    "2": {
+      "title": "Lateral",
+      "direction": [1, 0, 0],
+      "up": [0, 1, 0],
+      "zoom": 2.0,
+      "perspective": false,
+      "grid_axes": ["Y", "Z"]
+    },
+    "3": {
+      "title": "Front",
+      "direction": [0, 1, 0],
+      "up": [1, 0, 0],
+      "zoom": 2.0,
+      "perspective": false,
+      "grid_axes": ["X", "Z"]
+    },
+    "4": {
+      "title": "Orthographic XOY",
+      "direction": [0, 0, 1],
+      "up": [1, 0, 0],
+      "zoom": 1.0,
+      "perspective": false,
+      "grid_axes": ["X", "Y"]
+    },
+    "5": {
+      "title": "Orthographic XOY",
+      "node": "Unit00R_1/Ladder_LadderType09_101/LadderType09_cfSupport_0/vert_pillar_0",
+      "direction": [0, 0, 1],
+      "up": [1, 0, 0],
+      "zoom": 0.8,
+      "perspective": false,
+      "grid_axes": ["X", "Y"]
+    }
+  },
+  "dimensions": {
+    "5": [
+      {
+        "name": "1/2 CFSupport::pillarInnerDiameter",
+        "axis": "Y",
+        "side": "top",
+        "offset_px": 600,
+        "from": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "center"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "inner_radius",
+          "radial_axis": "Y"
+        }
+      },
+      {
+        "name": "CFSupport::pillarOuterDiameter",
+        "axis": "Y",
+        "side": "bottom",
+        "offset_px": 150,
+        "from": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "min_y"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "max_y"
+        }
+      }
+    ],
+    "4": [
+      {
+        "name": "CFSupport::sizeZ",
+        "axis": "Y",
+        "side": "bottom",
+        "offset_px": 200,
+        "from": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "center"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "bottommost",
+          "point": "center"
+        }
+      },
+      {
+        "name": "CFSupport::sizeX",
+        "axis": "X",
+        "side": "right",
+        "offset_px": 48,
+        "from": {
+          "shape": "vert_pillar_shp",
+          "instance": "leftmost",
+          "point": "center"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "rightmost",
+          "point": "center"
+        }
+      }
+    ],
+    "3": [
+      {
+        "name": "CFSupport::windingStepSizeY",
+        "axis": "Z",
+        "side": "bottom",
+        "offset_px": 150,
+        "from": {
+          "shape": "segment_base_shp",
+          "instance": "closest_to_center",
+          "point": "max_z"
+        },
+        "to": {
+          "shape": "segment_base_shp",
+          "instance": "closest_to_center",
+          "point": "min_z"
+        }
+      }
+    ],
+    "2": [
+      {
+        "name": "Segment base Z extent",
+        "axis": "Z",
+        "side": "bottom",
+        "offset_px": 90,
+        "from": {
+          "shape": "segment_sides_shape",
+          "instance": "closest_to_center",
+          "point": "max_z"
+        },
+        "to": {
+          "shape": "segment_sides_shape",
+          "instance": "closest_to_center",
+          "point": "min_z"
+        }
+      }
+    ]
+  },
+  "render": {
+    "width": 1600,
+    "height": 1200,
+    "dpi": [1200, 1200],
+    "output": "data/output/capture_sts_cfSupport.png",
+    "dimension_style": {
+      "font_size": 18,
+      "color_rgb": [165, 45, 40],
+      "line_width": 2,
+      "default_offset_px": 48,
+      "extension_dash_px": [3, 5],
+      "extension_width": 2,
+      "extension_overhang_px": 12,
+      "arrow_length_px": 9,
+      "arrow_half_width_px": 5
+    },
+    "typography": {
+      "tick_label_font_size": 20,
+      "pad_title_font_size": 26,
+      "axis_title_font_size": 16
+    }
+  }
+}

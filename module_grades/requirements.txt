@@ -1,0 +1,3 @@
+# Install geo_inspector separately from ../geo_inspector.
+matplotlib>=3.5
+pandas>=1.5

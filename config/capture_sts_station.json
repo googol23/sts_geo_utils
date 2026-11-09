@@ -1,0 +1,136 @@
+{
+  "geometry": {
+    "file": "/u/dramirez/cbm/cbmroot_geometry/macro/sts/fair/sts_v26a.geo.root",
+    "node": "/",
+    "include_nodes": [
+      "Unit00R_1",
+      "Unit00L_2",
+      "Unit01R_3/Ladder_LadderType51_100",
+      "Unit01R_3/Ladder_LadderType09_102",
+      "Unit01L_4/Ladder_LadderType09_101",
+      "Unit01L_4/Ladder_LadderType10_103"
+    ]
+  },
+  "layout": {
+    "matrix": ["111133", "222233", "444433"],
+    "aliases": {
+      "perspective": "3",
+      "orthographic_zox": "1",
+      "orthographic_zox_zoomed": "2",
+      "orthographic_xoy": "4"
+    }
+  },
+  "cameras": {
+    "3": {
+      "title": "Perspective",
+      "direction": [1, 0, -0.85],
+      "up": [0, 1, 0],
+      "zoom": 1.0,
+      "perspective": true
+    },
+    "1": {
+      "title": "Orthographic ZOX",
+      "direction": [0, 1, 0],
+      "up": [0, 0, 1],
+      "zoom": 1.0,
+      "perspective": false,
+      "grid_axes": ["X", "Z"]
+    },
+    "2": {
+      "title": "Orthographic ZOX - Zoomed",
+      "direction": [0, 1, 0],
+      "up": [0, 0, 1],
+      "zoom": 4.0,
+      "perspective": false,
+      "grid_axes": ["X", "Z"]
+    },
+    "4": {
+      "title": "Orthographic XOY",
+      "direction": [0, 0, 1],
+      "up": [0, 1, 0],
+      "zoom": 1.0,
+      "perspective": false,
+      "grid_axes": ["X", "Y"]
+    }
+  },
+  "dimensions": {
+    "2": [
+      {
+        "name": "LadderOverlapX",
+        "axis": "X",
+        "side": "top",
+        "offset_px": 100,
+        "from": {
+          "node": "Unit01R_3/Ladder_LadderType51_100",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "max_x"
+        },
+        "to": {
+          "node": "Unit00L_2/Ladder_LadderType50_100",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "min_x"
+        }
+      },
+      {
+        "name": "",
+        "axis": "X",
+        "side": "top",
+        "offset_px": 50,
+        "from": {
+          "node": "Unit01R_3/Ladder_LadderType51_100",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "min_x"
+        },
+        "to": {
+          "node": "Unit00R_1/Ladder_LadderType09_101",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "max_x"
+        }
+      },
+      {
+        "name": "",
+        "axis": "X",
+        "side": "top",
+        "offset_px": 50,
+        "from": {
+          "node": "Unit00L_2/Ladder_LadderType50_100",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "max_x"
+        },
+        "to": {
+          "node": "Unit01L_4/Ladder_LadderType09_101",
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "min_x"
+        }
+      }
+    ]
+  },
+  "render": {
+    "width": 1600,
+    "height": 1200,
+    "dpi": [600, 600],
+    "output": "data/output/capture_sts_station.png",
+    "dimension_style": {
+      "font_size": 18,
+      "color_rgb": [165, 45, 40],
+      "line_width": 2,
+      "default_offset_px": 48,
+      "extension_dash_px": [3, 5],
+      "extension_width": 2,
+      "extension_overhang_px": 12,
+      "arrow_length_px": 9,
+      "arrow_half_width_px": 5
+    },
+    "typography": {
+      "tick_label_font_size": 20,
+      "pad_title_font_size": 26,
+      "axis_title_font_size": 16
+    }
+  }
+}

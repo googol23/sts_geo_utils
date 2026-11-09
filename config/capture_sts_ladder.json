@@ -1,0 +1,162 @@
+{
+  "geometry": {
+    "file": "/u/dramirez/cbm/cbmroot_geometry/macro/sts/fair/sts_v26a.geo.root",
+    "node": "Unit00L_2/Ladder_LadderType50_100"
+  },
+  "layout": {
+    "matrix": [
+      "111144",
+      "222244",
+      "333344"
+    ],
+    "aliases": {
+      "perspective": "1",
+      "orthographic_zoy": "2",
+      "orthographic_zox": "4",
+      "orthographic_xoy": "3"
+    }
+  },
+  "cameras": {
+    "1": {
+      "title": "Perspective",
+      "direction": [1, 0, 0.85],
+      "up": [0, 0, 1],
+      "zoom": 1.0,
+      "perspective": true
+    },
+    "2": {
+      "title": "Orthographic ZOY",
+      "direction": [1, 0, 0],
+      "up": [0, 0, 1],
+      "zoom": 3.0,
+      "perspective": false,
+      "grid_axes": ["Z", "Y"]
+    },
+    "4": {
+      "title": "Orthographic ZOX",
+      "direction": [0, 1, 0],
+      "up": [1, 0, 0],
+      "zoom": 1.0,
+      "perspective": false,
+      "grid_axes": ["X", "Z"]
+    },
+    "3": {
+      "title": "Orthographic XOY",
+      "direction": [0, 0, 1],
+      "up": [-1, 0, 0],
+      "zoom": 2.5,
+      "perspective": false,
+      "grid_axes": ["X", "Y"]
+    }
+  },
+  "dimensions": {
+    "3": [
+      {
+        "name": "LadderInfo::halfLadderOffsetY",
+        "axis": "Y",
+        "side": "top",
+        "offset_px": 50,
+        "from": {
+          "shape": "Sensor01Shp",
+          "instance": "topmost",
+          "point": "min_y"
+        },
+        "to": {
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "max_y"
+        }
+      }
+    ],
+    "4": [
+      {
+        "name": "Sensor pitch",
+        "axis": "Z",
+        "side": "top",
+        "offset_px": 350,
+        "from": {
+          "shape": "Sensor01Shp",
+          "instance": "bottommost",
+          "point": "center"
+        },
+        "to": {
+          "shape": "Sensor02Shp",
+          "instance": "bottommost",
+          "point": "center"
+        }
+      },
+      {
+        "name": "fLadderFirstSensorGapZ",
+        "axis": "Z",
+        "side": "bottom",
+        "offset_px": 100,
+        "from": {
+          "shape": "Sensor01Shp",
+          "instance": "topmost",
+          "point": "min_z"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "bottommost",
+          "point": "max_z"
+        }
+      }
+    ],
+    "2": [
+      {
+        "name": "LadderInfo::cutoutSize",
+        "axis": "Y",
+        "side": "bottom",
+        "offset_px": 200,
+        "from": {
+          "shape": "vert_pillar_shp",
+          "instance": "topmost",
+          "point": "min_y"
+        },
+        "to": {
+          "shape": "vert_pillar_shp",
+          "instance": "bottommost",
+          "point": "max_y"
+        }
+      },
+      {
+        "name": "fLadderSensorOverlapY",
+        "axis": "Y",
+        "side": "top",
+        "offset_px": 50,
+        "from": {
+          "shape": "Sensor01Shp",
+          "instance": "topmost",
+          "point": "max_y"
+        },
+        "to": {
+          "shape": "Sensor02Shp",
+          "instance": "topmost",
+          "point": "min_y"
+        }
+      }
+    ]
+  },
+  "render": {
+    "width": 1600,
+    "height": 1200,
+    "dpi": [600, 600],
+    "output": "data/output/capture_sts_ladder.png",
+    "dimension_style": {
+      "font_size": 18,
+      "color_rgb": [165, 45, 40],
+      "line_width": 2,
+      "default_offset_px": 48,
+      "extension_dash_px": [3, 5],
+      "extension_width": 2,
+      "extension_overhang_px": 12,
+      "arrow_length_px": 9,
+      "arrow_half_width_px": 5
+    },
+    "typography": {
+      "tick_label_font_size": 20,
+      "pad_title_font_size": 26,
+      "axis_title_font_size": 16
+    }
+  }
+}

@@ -1,0 +1,291 @@
+STS geometry created with create_stsgeo_v22d.C
+
+Summary:
+  This version adds passive materials imported from GDML model to the STS geometry:
+    * Taken from and largely correspond to mechanical CAD drawings of the detector
+    * Thermal insulation box:
+      - made out of carbon sandwitch panel (2mm carbon fiber sheet + layer of carbon foam + 2mm carbon fiber sheet)
+      - front window of complex shape with interface to MVD / target chamber
+      - back window with large aperture (2000 x 1200 mm) square cut into carbon foam
+    * Structural units:
+      - made of 2 complex shape aluminum C-Frames, 15mm thick
+      - placed at 25, 35, ... ,105 cm absolute Z
+      - contain front-end and power distribution boxes with equivalent X_0 values
+
+  Scripted geometry tweaks:
+    * Ladders and cables are extended towards the read-out planes having same lengths in respective rows
+    * Adjusted form and shape of carbon ladder structures from L-type to X-type
+    * Reduced verbosity of this file
+
+  Sensor arrangement is the same as in version v16g
+
+  !! Important for this version is the discrepancy from the mechanical CAD w.r.t. front wall.
+  The square window was replaced by a round one to avoid overlaps with present beam pipe designs, e.g. pipe_v16b_1e
+
+Global variables: 
+Sensor thickness = 0.032 cm
+Vertical gap in sensor chain = 0 cm
+Vertical overlap of sensors = 0.46 cm
+Gap in z between neighbour sensors = 0.12 cm
+Horizontal overlap of sensors = 0.25 cm
+Gap in z between neighbour ladders = 0.35 cm
+Cable thickness = 0.032 cm
+
+Beam pipe: R1 = 1.8 cm at z = 22 cm
+Beam pipe: R2 = 1.8 cm at z = 50 cm
+
+Sensors: 
+Sensor01: size  6.2000 x  2.2000 x  0.0320, medium silicon
+Sensor02: size  6.2000 x  4.2000 x  0.0320, medium silicon
+Sensor03: size  6.2000 x  6.2000 x  0.0320, medium silicon
+Sensor04: size  6.2000 x 12.4000 x  0.0320, medium silicon
+Sensor05: size  4.0000 x  2.5000 x  0.0320, medium silicon
+Sensor06: size  3.1000 x  4.2000 x  0.0320, medium silicon
+Sensor07: size  1.5000 x  4.2000 x  0.0320, medium silicon
+
+Ladders:
+LadderType0001: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0101: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1001: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1101: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0002: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0102: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1002: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1102: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0003: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0103: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1003: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1103: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0004: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0104: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1004: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1104: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0005: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0105: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1005: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1105: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0006: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0106: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1006: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1106: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0007: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0107: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1007: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1107: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0008: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0108: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1008: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1108: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0009: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0109: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1009: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1109: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0010: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0110: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1010: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1110: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0011: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0111: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1011: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType1111: size  6.2000 x 48.0000 x  4.5434, assembly
+LadderType0012: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0112: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1012: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1112: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0013: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0113: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1013: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1113: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0014: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0114: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1014: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1114: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0015: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0115: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1015: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1115: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0016: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0116: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1016: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1116: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0017: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0117: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1017: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1117: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0018: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0118: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1018: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1118: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0019: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0119: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1019: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1119: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0020: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0120: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1020: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1120: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0021: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0121: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1021: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1121: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0022: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0122: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1022: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1122: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0023: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0123: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1023: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1123: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0024: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0124: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1024: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1124: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0025: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0125: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1025: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1125: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0026: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0126: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1026: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1126: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0027: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0127: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1027: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1127: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0028: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0128: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1028: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1128: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0029: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0129: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1029: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1129: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0030: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0130: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1030: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType1130: size  6.2000 x 66.8000 x  4.5434, assembly
+LadderType0031: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0131: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1031: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1131: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0032: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0132: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1032: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1132: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0033: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0133: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1033: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1133: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0034: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0134: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1034: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType1134: size  6.2000 x 81.8000 x  4.5434, assembly
+LadderType0035: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0135: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1035: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1135: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0036: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0136: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1036: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1136: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0037: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0137: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1037: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1137: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0038: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0138: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1038: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType1138: size  6.2000 x 89.2000 x  4.5434, assembly
+LadderType0039: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0139: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1039: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1139: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0040: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0140: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1040: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1140: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0041: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType0141: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1041: size  6.2000 x 96.7000 x  4.5434, assembly
+LadderType1141: size  6.2000 x 96.7000 x  4.5434, assembly
+
+Stations: 
+Unit00R: size 18.1000 x 48.0000 x  4.5434, assembly
+Contains: LadderType0010 LadderType0009 
+Unit00L: size 18.1000 x 48.0000 x  4.5434, assembly
+Contains: LadderType0101 LadderType0109 
+Position z = -73.5000
+Position z = -73.5000
+Unit01R: size 30.0000 x 48.0000 x 10.1500, assembly
+Contains: LadderType1109 LadderType1101 LadderType0010 LadderType0009 LadderType0002 
+Unit01L: size 30.0000 x 48.0000 x 10.1500, assembly
+Contains: LadderType1009 LadderType1010 LadderType0109 LadderType0110 LadderType0111 
+Position z = -73.5000
+Position z = -73.5000
+Unit02R: size 30.0000 x 66.8000 x 10.1500, assembly
+Contains: LadderType1130 LadderType1129 LadderType1128 LadderType0014 LadderType0012 LadderType0012 
+Unit02L: size 30.0000 x 66.8000 x 10.1500, assembly
+Contains: LadderType1002 LadderType1028 LadderType1029 LadderType0103 LadderType0112 LadderType0113 
+Position z = -63.0000
+Position z = -63.0000
+Unit04R: size 41.9000 x 66.8000 x  4.5434, assembly
+Contains: LadderType0015 LadderType0013 LadderType0012 LadderType0004 
+Unit04L: size 30.0000 x 66.8000 x  4.5434, assembly
+Contains: LadderType0112 LadderType0112 LadderType0114 
+Position z = -52.5000
+Position z = -52.5000
+Unit05R: size 30.0000 x 81.8000 x 10.1500, assembly
+Contains: LadderType1133 LadderType1131 LadderType1131 LadderType0018 LadderType0017 LadderType0016 
+Unit05L: size 41.9000 x 81.8000 x 10.1500, assembly
+Contains: LadderType1004 LadderType1031 LadderType1032 LadderType1034 LadderType0105 LadderType0116 LadderType0117 LadderType0119 
+Position z = -40.0000
+Position z = -40.0000
+Unit06R: size 41.9000 x 81.8000 x 10.1500, assembly
+Contains: LadderType1119 LadderType1117 LadderType1116 LadderType1105 LadderType0019 LadderType0017 LadderType0016 LadderType0006 
+Unit06L: size 30.0000 x 81.8000 x 10.1500, assembly
+Contains: LadderType1016 LadderType1017 LadderType1018 LadderType0116 LadderType0117 LadderType0118 
+Position z = -40.0000
+Position z = -40.0000
+Unit07R: size 41.9000 x 89.2000 x 10.1500, assembly
+Contains: LadderType1137 LadderType1136 LadderType1135 LadderType0021 LadderType0025 LadderType0020 LadderType0020 
+Unit07L: size 41.9000 x 89.2000 x 10.1500, assembly
+Contains: LadderType1006 LadderType1035 LadderType1036 LadderType1038 LadderType0107 LadderType0120 LadderType0120 LadderType0127 
+Position z = -29.5000
+Position z = -29.5000
+Unit08R: size 41.9000 x 96.7000 x 10.1500, assembly
+Contains: LadderType1126 LadderType1139 LadderType1139 LadderType1107 LadderType0024 LadderType0022 LadderType0022 LadderType0008 
+Unit08L: size 41.9000 x 96.7000 x 10.1500, assembly
+Contains: LadderType1039 LadderType1039 LadderType1040 LadderType1041 LadderType0122 LadderType0122 LadderType0123 LadderType0126 
+Position z = -19.0000
+Unit09R: size 41.9000 x 96.7000 x  4.5434, assembly
+Contains: LadderType1126 LadderType1123 LadderType1122 LadderType1122 
+Unit09L: size 41.9000 x 96.7000 x  4.5434, assembly
+Contains: LadderType1008 LadderType1022 LadderType1022 LadderType1024 
+Position z = -19.0000
+
+
+Importing STS passive materials from GDML file '/geometry/sts/passive/sts_passive_v22d.gdml'.
+Passive assembly is translated for Z=2.68 cm downstream with respect to parent volume
+
+sts_passive_v22d: size 325.0000 x 145.0000 x 124.4000, assembly
+Contains: passive_unit0 passive_unit1 passive_unit2 passive_unit3 passive_unit4 passive_unit5 passive_unit6 passive_unit7 passive_unit8 passive_Box_Wall_Vertical_Light passive_Box_Wall_Vertical_Light2 passive_Box_Wall_Bottom_Light passive_Box_Wall_Top_Light STS3_passive_Box_Wall_Top_Aluminium_Plate STS3_passive_Box_Wall_Top_Aluminium_Plate passive_Box_Wall_Front_Light Passive_Electronics_Front_Wall_box passive_Box_Wall_Back_Light Flange_volume 
+
+passive_unit0: size 176.0000 x 100.0000 x  6.3300, assembly
+passive_unit1: size 176.0000 x 100.0000 x 10.5600, assembly
+passive_unit2: size 176.0000 x 100.0000 x 10.4600, assembly
+passive_unit3: size 176.0000 x 115.0000 x 12.4600, assembly
+passive_unit4: size 176.0000 x 115.0000 x 10.4600, assembly
+passive_unit5: size 176.0000 x 115.0000 x 10.4600, assembly
+passive_unit6: size 176.0000 x 130.0000 x 10.4600, assembly
+passive_unit7: size 176.0000 x 130.0000 x 10.4600, assembly
+passive_unit8: size 179.1000 x 130.0000 x  5.5600, assembly
+passive_Box_Wall_Vertical_Light: size  4.0000 x 145.0000 x 113.5000, assembly
+passive_Box_Wall_Vertical_Light2: size 321.0000 x 145.0000 x 113.5000, assembly
+passive_Box_Wall_Bottom_Light: size 317.0000 x 140.6000 x 113.5000, assembly
+passive_Box_Wall_Top_Light: size 317.0000 x  4.4000 x 113.5000, assembly
+STS3_passive_Box_Wall_Top_Aluminium_Plate: size 215.0000 x  2.0000 x 50.6500, medium aluminium
+STS3_passive_Box_Wall_Top_Aluminium_Plate: size 215.0000 x  2.0000 x 50.6500, medium aluminium
+passive_Box_Wall_Front_Light: size 215.0000 x 145.0000 x 56.6500, assembly
+Passive_Electronics_Front_Wall_box: size 325.0000 x 145.0000 x 11.0000, assembly
+passive_Box_Wall_Back_Light: size 325.0000 x 145.0000 x  2.4000, assembly
+Flange_volume: size 14.4000 x 14.4000 x  5.0000, assembly

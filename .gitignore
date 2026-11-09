@@ -1,0 +1,53 @@
+# Python bytecode and interpreter caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environments and environment files
+.venv/
+.venv-*/
+venv/
+env/
+.env
+
+# Packaging and editable-install artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+*.whl
+
+# Test, coverage, lint, and type-checker caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.pyright/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Generated runtime artifacts
+output/
+results/
+local_artifacts/
+*.log
+
+# Geometry files are external inputs and must not be stored in this project
+*.root
+
+# Native build artifacts
+*.so
+*.dylib
+*.dll
+
+# Editor and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

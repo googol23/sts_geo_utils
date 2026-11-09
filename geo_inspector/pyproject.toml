@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo_inspector"
+version = "0.1.0"
+description = "Standalone ROOT TGeo navigation and sensor geometry extraction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["sts-utils>=0.1.0,<0.2.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+geo-inspector = "geo_inspector.cli:main"
+
+# The project directory itself is the package, preserving the source script paths.
+[tool.setuptools]
+packages = ["geo_inspector"]
+package-dir = { geo_inspector = "." }
+include-package-data = false
+
+[tool.setuptools.package-data]
+geo_inspector = ["extract_sts_sensors.C"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

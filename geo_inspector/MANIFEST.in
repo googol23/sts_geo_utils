@@ -1,0 +1,5 @@
+include README.md pyproject.toml
+recursive-include tests *.py
+prune .venv
+prune build
+prune data
